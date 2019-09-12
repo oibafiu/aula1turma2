@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProcurarComFor
+namespace FindForNew
 {
     class Program
     {
@@ -24,19 +24,24 @@ namespace ProcurarComFor
         private static int FindByFor(string wordFind)
         {
             var contentToFind = TextContent();
-            var lengthText = contentToFind.Length;
+            var wordFindCountLength = wordFind.Length;
+            var lengthText = contentToFind.Length - (wordFindCountLength - 1);
             var contWordFind = 0;
+            var b = 0;
 
-            for (int i = 0; i < lengthText; i++)
+            for (int i = 0; i < lengthText;)
             {
-                var compareWord = contentToFind[i].ToString() +
-                                   contentToFind[i + 1].ToString() +
-                                   contentToFind[i + 2].ToString();
+                var compareWord = string.Empty;
 
+                var b = 0;
+                for (b = wordFindCountLength) 
+                
+                         
 
                 if (wordFind == compareWord)
                     contWordFind++;
             }
+            
             return 0;
         }
         public static string TextContent()
@@ -62,3 +67,4 @@ namespace ProcurarComFor
         }
     }
 }
+
