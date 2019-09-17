@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeachNaLista", "ForeachNa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetodosPublicos", "MetodosPublicos\MetodosPublicos.csproj", "{985DCCAF-2714-4F69-A74D-636F3A42FFEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversorMonetario", "ConversorMonetario\ConversorMonetario.csproj", "{29CD0909-8D37-49D8-999B-1844B0D25786}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvore", "Arvore\Arvore.csproj", "{63CF6B3B-3EDD-4D35-987A-668E946A90C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{985DCCAF-2714-4F69-A74D-636F3A42FFEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{985DCCAF-2714-4F69-A74D-636F3A42FFEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{985DCCAF-2714-4F69-A74D-636F3A42FFEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29CD0909-8D37-49D8-999B-1844B0D25786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29CD0909-8D37-49D8-999B-1844B0D25786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29CD0909-8D37-49D8-999B-1844B0D25786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29CD0909-8D37-49D8-999B-1844B0D25786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63CF6B3B-3EDD-4D35-987A-668E946A90C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63CF6B3B-3EDD-4D35-987A-668E946A90C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63CF6B3B-3EDD-4D35-987A-668E946A90C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63CF6B3B-3EDD-4D35-987A-668E946A90C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

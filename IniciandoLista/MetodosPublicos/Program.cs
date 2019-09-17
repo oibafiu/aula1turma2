@@ -7,24 +7,27 @@ using System.Threading.Tasks;
 
 namespace MetodosPublicos
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+         static void Main(string[] args)
         {
-            Console.WriteLine("Sistema conversor de moedas");
-            Console.WriteLine("Informe um valor a ser convertido:");
+            //Console.WriteLine("Sistema conversor de moedas");
+            //Console.WriteLine("Informe um valor a ser convertido:");
 
-            var valorASerConvertido = double.Parse(Console.ReadLine());
+            //var valorASerConvertido = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Informe uma moeda para conversão");
-            Console.WriteLine("DOLAR, EURO, YEN, BTC");
+            //Console.WriteLine("Informe uma moeda para conversão");
+            //Console.WriteLine("DOLAR, EURO, YEN, BTC");
 
-            var moedaAlvoParaConverter = Console.ReadLine();
+            //var moedaAlvoParaConverter = Console.ReadLine();
 
-            ConvertMoeda(valorASerConvertido, moedaAlvoParaConverter);
+            //ConvertMoeda(valorASerConvertido, moedaAlvoParaConverter);
 
-            Console.ReadKey();
+            //Console.ReadKey();
         }
+
+     
+
         /// <summary>
         /// Metodo que converte moeda em real para um alvo especificado
         /// para converter digite os alvos:
@@ -34,7 +37,7 @@ namespace MetodosPublicos
         /// "DOLAR"
         /// </summary>
         /// <param name="minhaMoeda">Moeda em valor real</param>
-        /// <param name="moedaAlvo">Moeda a ser convertida</param>
+        /// <param name="moedaAlvo">Moeda a ser convertida</param>S
         public static void ConvertMoeda(double minhaMoeda,string moedaAlvo)
         {
             switch (moedaAlvo)
@@ -55,6 +58,7 @@ namespace MetodosPublicos
             
         
                 default:
+                    Console.WriteLine("nenhuma opção válida informada");
                     break;
             }
         }
@@ -95,5 +99,36 @@ namespace MetodosPublicos
             return (meuNumero / 0.038).ToString("C3", CultureInfo.CreateSpecificCulture("ja-JP"));
 
         }
+        public static void TextoConvert()
+        {
+            Console.WriteLine("Sistema conversor de moedas");
+            Console.WriteLine("Informe um valor a ser convertido:");
+
+            var valorASerConvertido = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Informe uma moeda para conversão");
+            Console.WriteLine("DOLAR, EURO, YEN, BTC");
+
+            var moedaAlvoParaConverter = Console.ReadLine();
+
+            ConvertMoeda(valorASerConvertido, moedaAlvoParaConverter);
+
+            Console.ReadKey();
+        
+
     }
+        public static void Arvore()
+        {
+            Console.WriteLine(" /" + "\\");
+            Console.WriteLine("/|" + "|\\");
+            Console.WriteLine("/|" + "|\\");
+            Console.WriteLine("/|" + "|\\");
+            Console.WriteLine("/|" + "|\\");
+            Console.WriteLine("/|" + "|\\");
+            Console.WriteLine(" |" + "| ");
+            Console.WriteLine("~~" + "~~");
+            Console.ReadKey();
+        }
+
+}
 }
