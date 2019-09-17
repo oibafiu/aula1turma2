@@ -86,28 +86,49 @@ namespace ForeachNaLista
             minhaLista.Add(2.42);
             minhaLista.Add(0.02);
 
-            minhaLista.ForEach(i => Console.WriteLine(i.ToString("C") + " " + FormataNumeroDecimalEuropa(i))); //String.Format("{0:C}", i
+            minhaLista.ForEach(i => Console.WriteLine(i.ToString("C") + " " + FormataNumeroDecimalBitcoin(i))); //String.Format("{0:C}", i
             Console.ReadKey();
         }
-        
+
+        /// <summary>
+        /// metodo que transforma o numero decimal em dolar
+        /// </summary>
+        /// <param name="meuNumero">retorna o valor formatado</param>
+        /// <returns></returns>
         private static string FormataNumeroDecimal(double meuNumero)
         {
             return (meuNumero / 4.5008).ToString("C3", CultureInfo.CreateSpecificCulture("en-US"));
             
         }
+        /// <summary>
+        /// metodo que transforma o numero decimal em Iene
+        /// </summary>
+        /// <param name="meuNumero">meu valor formatado em real</param>
+        /// <returns>retorna o valor formatado</returns>
         private static string FormataNumeroDecimalIene(double meuNumero)
         {
             return (meuNumero / 0.038).ToString("C3", CultureInfo.CreateSpecificCulture("ja-JP"));
 
         }
+        /// <summary>
+        /// metodo que transforma o numero decimal em Euro
+        /// </summary>
+        /// <param name="meuNumero">meu valor formatado em real</param>
+        /// <returns>retorna o valor formatado</returns>
         private static string FormataNumeroDecimalEuropa(double meuNumero)
         {
+            Console.OutputEncoding = Encoding.Default;
             return (meuNumero / 5.0274).ToString("C3", CultureInfo.CreateSpecificCulture("fr-BE"));
 
         }
+        /// <summary>
+        /// metodo que transforma o numero decimal em Bitcoin
+        /// </summary>
+        /// <param name="meuNumero">meu valor formatado em real</param>
+        /// <returns>retorna o valor formatado</returns>
         private static string FormataNumeroDecimalBitcoin(double meuNumero)
         {
-            return (meuNumero / 42050.00000).ToString("C3", CultureInfo.CreateSpecificCulture("BTC"));
+            return (meuNumero / 42050.00000).ToString("C6", CultureInfo.CreateSpecificCulture("BTC"));
 
         }
     }
