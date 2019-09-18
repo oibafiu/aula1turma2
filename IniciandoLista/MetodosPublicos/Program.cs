@@ -129,6 +129,42 @@ namespace MetodosPublicos
             Console.WriteLine("~~" + "~~");
             Console.ReadKey();
         }
+        public static void ListarCerveja()
+        {
+            var cerveja = new List<string>();
+            {
+                cerveja.Add("Brahma");
+                cerveja.Add("Skol");
+                cerveja.Add("Patagonia");
+                cerveja.Add("CARACU");
 
-}
+
+            }
+           
+
+            cerveja.ForEach(i => Console.WriteLine(i));
+
+            Console.ReadKey();
+        }
+        public static void ListaCarros()
+        {
+            var minhaLista = new List<string>
+            {
+
+
+                "Audi",
+                "Volksvagem",
+                "Fiat",
+                "BMW",
+                "Ferrari"
+            };
+
+            minhaLista.ForEach(i => Console.WriteLine(i));
+
+            Console.ReadKey();
+
+        }
+
+
+    }
 }

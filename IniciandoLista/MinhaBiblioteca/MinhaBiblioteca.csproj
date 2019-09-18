@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{63CF6B3B-3EDD-4D35-987A-668E946A90C9}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Arvore</RootNamespace>
-    <AssemblyName>Arvore</AssemblyName>
+    <ProjectGuid>{8E50C558-65B2-4F0A-957C-C1D9273B1D21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MinhaBiblioteca</RootNamespace>
+    <AssemblyName>MinhaBiblioteca</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,21 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="CalculosDeArea.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MetodosPublicos\MetodosPublicos.csproj">
-      <Project>{985dccaf-2714-4f69-a74d-636f3a42ffee}</Project>
-      <Name>MetodosPublicos</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MinhaBiblioteca\MinhaBiblioteca.csproj">
-      <Project>{8e50c558-65b2-4f0a-957c-c1d9273b1d21}</Project>
-      <Name>MinhaBiblioteca</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
