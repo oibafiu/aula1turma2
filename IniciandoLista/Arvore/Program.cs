@@ -11,7 +11,35 @@ namespace Arvore
     {
         static void Main(string[] args)
         {
-            CalculaArea();
+            MenuSistema();
+        }
+        private static void MenuSistema()
+        {
+            Console.WriteLine("Escolha uma das opções do menu:");
+            Console.WriteLine("1 - Calculo de área");
+            Console.WriteLine("2 - Mostrar animaçã");
+            Console.WriteLine("3 - Sair do sistema");
+
+            var menuEscolhido = int.Parse(Console.ReadLine());
+
+            switch (menuEscolhido)
+            {
+                case 1: {
+                        CalculaArea();
+                        MenuSistema();
+                    } break;
+                case 2: {
+                       AnimacoesEmFrame.Part1();
+                        MenuSistema();
+
+                    } break;
+                case 3: {
+                        Console.WriteLine("Saindo......");
+                        return;
+                    } 
+                default:
+                    break;
+            }
         }
         public static void CalculaArea()
         {
@@ -21,5 +49,6 @@ namespace Arvore
             Console.WriteLine($"Minha area é {bibliotecaCalculos.CalculaAreaDoQuadrado(ladoQuadrado)}");
             Console.ReadKey();
         }
+       
     }
 }
