@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvore", "Arvore\Arvore.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinhaBiblioteca", "MinhaBiblioteca\MinhaBiblioteca.csproj", "{8E50C558-65B2-4F0A-957C-C1D9273B1D21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcessandoDllDoAmiguinho", "AcessandoDllDoAmiguinho\AcessandoDllDoAmiguinho.csproj", "{B7BC1EC0-A95D-426F-808D-A427A59C9988}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{8E50C558-65B2-4F0A-957C-C1D9273B1D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E50C558-65B2-4F0A-957C-C1D9273B1D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E50C558-65B2-4F0A-957C-C1D9273B1D21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7BC1EC0-A95D-426F-808D-A427A59C9988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7BC1EC0-A95D-426F-808D-A427A59C9988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7BC1EC0-A95D-426F-808D-A427A59C9988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7BC1EC0-A95D-426F-808D-A427A59C9988}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -18,7 +18,9 @@ namespace Arvore
             Console.WriteLine("Escolha uma das opções do menu:");
             Console.WriteLine("1 - Calculo de área");
             Console.WriteLine("2 - Mostrar animaçã");
-            Console.WriteLine("3 - Sair do sistema");
+            Console.WriteLine("3 - Listar Cervejas da Ambev");
+            Console.WriteLine("4 - Listar Carros");
+            Console.WriteLine("5 - Sair do sistema");
 
             var menuEscolhido = int.Parse(Console.ReadLine());
 
@@ -33,7 +35,16 @@ namespace Arvore
                         MenuSistema();
 
                     } break;
-                case 3: {
+                case 3:
+                    {
+                        CervejasLista.CervejaLista();MenuSistema();
+
+                    } break;
+                case 4:
+                    {
+                        ListarCarro.ListaCarro();MenuSistema();
+                    } break;
+                case 5: {
                         Console.WriteLine("Saindo......");
                         return;
                     } 
