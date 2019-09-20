@@ -11,6 +11,9 @@ namespace InterfaceBiblioteca
 {
     class Program
     {
+        static LivrosController livros = new LivrosController();
+
+        static UsuarioController usuarioController = new UsuarioController();
         static void Main(string[] args)
         {
             Console.WriteLine("Sistema de Loacação de Livros 1.0");
@@ -30,28 +33,68 @@ namespace InterfaceBiblioteca
         /// </summary>
         public static void MostraMenuSistema()
         {
-            Console.Clear();
+
+            var menuEscolhido = int.MinValue;
+
+            while (menuEscolhido != 0)
+            {
+                Console.Clear();
             Console.WriteLine("Sistema de Locação de livro 1.0");
 
             Console.WriteLine("----- Menu Sistema -----");
             Console.WriteLine("1 - Listar Usuários");
             Console.WriteLine("2 - Livro");
-            Console.WriteLine("3 - Livro");
-            Console.WriteLine("0 - Sair");
-
-            var resposta = Console.ReadLine();
-            if (resposta == "2") ;
-            {
-                Livro();
-
-            }
-
-
-
-
-            //Aqui vamos pegar numero digitado
+            Console.WriteLine("3 - Usuario");
+            Console.WriteLine("4 - Sair do sistema");
+                Console.WriteLine("0 - Sair");
+             
+            menuEscolhido = int.Parse(Console.ReadKey(true).KeyChar.ToString());
             //Executar proxima funcao
+            switch (menuEscolhido)
+            {
+                case 2:
+                    MostrarLivro();
+                    break;
+                case 3: ListarUsuario();
+                        break;
+                    case 4:
+                        while (!RealizaLoginSistema())
+                            Console.WriteLine("Login e senha inválidos!!!!");
+                        break;
+
+                default:
+                    break;
+            }
         }
+    }
+
+        public static void MostrarLivro()
+        {
+            livros.livros.ForEach(i =>
+            Console.WriteLine($"Nome do livro:{i.Nome}"));
+
+            Console.ReadKey();
+        }
+        public static void ListarUsuario()
+        {
+            usuarioController.ListaDeUsuarios.ForEach(i =>
+            Console.WriteLine($"Login do usuário:{i.Login}"));
+
+            Console.ReadKey();
+        }
+        public static void SairDoSistema()
+        {
+
+            RealizaLoginSistema();
+           
+        }
+
+
+
+
+        //Aqui vamos pegar numero digitado
+        //Executar proxima funcao
+
         /// <summary>
         /// Metodo que realiza os procedimentos completos de login
         /// dentro do sitema como solicitação de login e senha pelo console
@@ -76,22 +119,8 @@ namespace InterfaceBiblioteca
             usuario.Senha = senhaDoUsuario;
 
             return usuarioController.LoginSistema(usuario);
-            }      
-        public static void Livro()
-        {
-            Livro livro = new Livro()
-            {
-                Nome = "Meu livro - XXX"
-            };
-
-            Console.WriteLine($"Meu livro é {livro.Nome}");
-
-
-        }
+            }    
         
-
-          
-
 
         }
 

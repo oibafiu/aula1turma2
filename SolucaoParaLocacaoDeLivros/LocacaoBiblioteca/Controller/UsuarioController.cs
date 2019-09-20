@@ -12,6 +12,22 @@ namespace LocacaoBiblioteca.Controller
     /// </summary>
     public class UsuarioController
     {
+        public UsuarioController() //o metodo construtor deve ser sempre do mesmo nome da Classe
+        {
+            var ListaDeUsuarios = new List<Usuario>();
+            ListaDeUsuarios.Add(new Usuario()
+            {
+                Login = "admin",
+                Senha = "admin"
+            });
+            ListaDeUsuarios.Add(new Usuario()
+            {
+                Login = "Fabio",
+                Senha = "fabio"
+            });
+
+        }
+
         /// <summary>
         /// Metodo que realiza o login do usuário dentro do sistema
         /// para realizar o login padrão use:
@@ -20,16 +36,22 @@ namespace LocacaoBiblioteca.Controller
         /// </summary>
         /// <param name="Usuario">Passamos um objeto de nome usuario  como um parametro</param>
         /// <returns>Retorna verdadeiro caso o login e senha esteja correto e falso caso não esteja correto.</returns>
-        public  bool LoginSistema(Usuario usuarios) //retorna um booleano true ou false 
+        public bool LoginSistema(Usuario usuarios) //retorna um booleano true ou false 
         {
             if (usuarios.Login == "Admin" && usuarios.Senha == "Admin")
+
+
                 return true;
             else
             {
                 return false;
             }
+        }
+            
+            public List<Usuario> ListaDeUsuarios { get; set; }
 
         }
-
     }
-}
+
+    
+
