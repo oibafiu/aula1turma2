@@ -52,6 +52,7 @@ namespace InterfaceBiblioteca
             Console.WriteLine("4 - Fazer novo acesso.");
             Console.WriteLine("5 - Adicionar novo usuário.");
                 Console.WriteLine("6 - Remover Usuário");
+                Console.WriteLine("7 - Remover Livros");
                 Console.WriteLine("0 - Sair");
              
             menuEscolhido = int.Parse(Console.ReadKey(true).KeyChar.ToString());
@@ -76,6 +77,9 @@ namespace InterfaceBiblioteca
                         break;
                     case 6:
                         RemoverUsuario();
+                        break;
+                    case 7:
+                        RemoverLivro();
                         break;
 
                     default:
@@ -113,6 +117,19 @@ namespace InterfaceBiblioteca
             Console.WriteLine("Usuario desativado com sucesso");
             Console.ReadKey();
         }
+        private static void RemoverLivro()
+        {
+            Console.WriteLine("Remover livros do sistema!!");
+            MostrarLivro();
+
+            Console.WriteLine("Informe o ID para desativar o livro no sistema");
+            var livrosID = int.Parse(Console.ReadLine());
+
+            livrosController.RemoverLivrosPorID(livrosID);
+
+            Console.WriteLine("Livro desativado com sucesso");
+            Console.ReadKey();
+        }
         public static void MostrarLivro()
         {
             livrosController.RetornaListaDeLivros().ForEach(i =>
@@ -124,7 +141,7 @@ namespace InterfaceBiblioteca
         public static void ListarUsuario()
         {
             usuarioController.RetornaListaDeUsuarios().ForEach(i =>
-            Console.WriteLine($"Login do usuário:{i.Login}"));
+            Console.WriteLine($"iD = {i.Id} Login do usuário:{i.Login}"));
 
             Console.ReadKey();
         }
@@ -156,9 +173,6 @@ namespace InterfaceBiblioteca
             Console.WriteLine("Livro cadastrado com sucesso");
             Console.ReadKey();
         }
-
-        
-
         /// <summary>
         /// Metodo que realiza os procedimentos completos de login
         /// dentro do sitema como solicitação de login e senha pelo console
@@ -191,8 +205,6 @@ namespace InterfaceBiblioteca
                 Senha = senhaDoUsuario
             });
         }
-
-
     }
 
     }

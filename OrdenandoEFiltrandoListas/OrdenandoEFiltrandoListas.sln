@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CestoDeFrutas", "CestoDeFru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio", "Exercicio\Exercicio.csproj", "{32FB7A8E-81A5-45ED-8479-A3ED843971FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListandoPessoas2", "ListandoPessoas2\ListandoPessoas2.csproj", "{BF8EBEEA-903C-45EE-91D4-E5E4B72214D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{32FB7A8E-81A5-45ED-8479-A3ED843971FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32FB7A8E-81A5-45ED-8479-A3ED843971FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32FB7A8E-81A5-45ED-8479-A3ED843971FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF8EBEEA-903C-45EE-91D4-E5E4B72214D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF8EBEEA-903C-45EE-91D4-E5E4B72214D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF8EBEEA-903C-45EE-91D4-E5E4B72214D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF8EBEEA-903C-45EE-91D4-E5E4B72214D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

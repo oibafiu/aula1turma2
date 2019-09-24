@@ -9,34 +9,28 @@ namespace LocacaoBiblioteca.Controller
 {
     public class LivrosController
     {
-        private int IdContador = 1;
-        public LivrosController() //o metodo construtor deve ser sempre do mesmo nome da Classe
-        {
-        ListaDeLivros = new List<Livro>();
-            ListaDeLivros.Add(new Livro()
-            {
-                Id = IdContador++,
-                Nome = "Meu Primeiro Livro"
-
-            }); 
-            ListaDeLivros.Add(new Livro()
-            {
-                Id = IdContador++,
-                Nome = "Meu segundo livro"
-                
-            });
-
-        }
+        private LocacaoContext contextDB = new LocacaoContext();
+        
         private List<Livro> ListaDeLivros { get; set; }
         public void AdicionarLivro(Livro parametroLivro)
         {
             //Adicionamos o livro em nossa lista
-            parametroLivro.Id = IdContador++;
+            parametroLivro.Id = contextDB.IdContadorLivros++;
             ListaDeLivros.Add(parametroLivro);
         }
         public List<Livro> RetornaListaDeLivros()
         {
-            return ListaDeLivros;
+            return contextDB.ListaDeLivros.Where(i => i.Ativo).ToList<Livro>();
+        }
+        public void RemoverLivrosPorID(int identificadorID)
+        {
+            //Aqui usamos o metodo firstordefault para localizar nosso usuario dentro da lista, com isso conseguimos acessar as
+            //propriedades dele e desativar o registro
+            var livro = ListaDeLivros.FirstOrDefault(i => i.Id == identificadorID);
+
+            if (livro != null)
+                livro.Ativo = false;
         }
     }
 }
+
