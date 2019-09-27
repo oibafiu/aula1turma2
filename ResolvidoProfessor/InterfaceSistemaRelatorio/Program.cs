@@ -42,7 +42,7 @@ namespace InterfaceSistemaRelatorio
                             
                            listaDoPeriodoEscolhido.ForEach(i => ImprimeInformacoes(i));
 
-                            var totalMes = vendasController.GetVendas(mesEscolhido).Sum(i => i.Valor * i.Quantidade);
+                            var totalMes = vendasController.GetVendas(mesEscolhido).Sum(i => i.Valor);
 
                             var mediaPeriodo = listaDoPeriodoEscolhido.Average(i => i.Valor * i.Quantidade);
 
