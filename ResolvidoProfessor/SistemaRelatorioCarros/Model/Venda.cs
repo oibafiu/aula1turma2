@@ -4,16 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VendaCarros.Model
+namespace SistemaRelatorioCarros.Model
 {
-    
-    class Carro
+    public class Venda
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public int Quantidade { get; set; }
+        public string Carro { get; set; }
         public double Valor { get; set; }
-        public string Data { get; set; }
+        public int Quantidade { get; set; }
+        public DateTime Data { get; set; }
     }
-   
 }

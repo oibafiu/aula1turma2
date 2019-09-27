@@ -9,17 +9,11 @@ namespace VendaCarros.Controller
 {
     public class VendaController
     {
-        public VendaController()
-        {
-            listaDeCarros = new List<Carro>();
+        private VendaContext contextDB = new VendaContext();
 
-            listaDeCarros.Add(new Carro()
-            {
-                
-            }
+       
 
         }
         
         }
-    }
-}
+    
