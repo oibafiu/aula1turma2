@@ -5,29 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocacaoBiblioteca.Model
+namespace CatalogoCelulares.Model
 {
-    public class Usuario
+    public class Usuario : ControleUsuario
     {
         [Key]
         public int Id { get; set; }
+        [MaxLength(50)]
+        public string Nome { get; set; }
         [MaxLength(30)]
         [Required]
         public string Login { get; set; }
         [MaxLength(30)]
         [Required]
-
         public string Senha { get; set; }
-
-        public bool Ativo { get; set; } = true;
-
-        public int UsuarioCriacao { get; set; } = 0;
-
-        public int UsuarioAlteracao { get; set; } = 0;
-
-        public DateTime DataCriacao { get; set; } = DateTime.Now;
-
-        public DateTime DataAlteracao { get; set; } = DateTime.Now;
     }
-
 }

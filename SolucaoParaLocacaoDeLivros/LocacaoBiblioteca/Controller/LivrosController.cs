@@ -4,33 +4,62 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LocacaoBiblioteca.Model;
 
 namespace LocacaoBiblioteca.Controller
 {
     public class LivrosController
     {
-        private LocacaoContext contextDB = new LocacaoContext();
-        
-        private List<Livro> ListaDeLivros { get; set; }
-        public void AdicionarLivro(Livro parametroLivro)
+        LocacaoContext contextDB = new LocacaoContext();
+        public IQueryable<Livro> GetLivros()
         {
-            //Adicionamos o livro em nossa lista
-            parametroLivro.Id = contextDB.IdContadorLivros++;
-            ListaDeLivros.Add(parametroLivro);
+            return contextDB.Livros.Where(i => i.Ativo == true);
         }
-        public List<Livro> RetornaListaDeLivros()
-        {
-            return contextDB.ListaDeLivros.Where(i => i.Ativo).ToList<Livro>();
-        }
-        public void RemoverLivrosPorID(int identificadorID)
-        {
-            //Aqui usamos o metodo firstordefault para localizar nosso usuario dentro da lista, com isso conseguimos acessar as
-            //propriedades dele e desativar o registro
-            var livro = ListaDeLivros.FirstOrDefault(i => i.Id == identificadorID);
 
-            if (livro != null)
-                livro.Ativo = false;
+        public bool AtualizarLivro(Livro item)
+        {
+            var livro = contextDB.Livros.FirstOrDefault(i => i.Id == item.Id);
+
+            if (livro == null)
+                return false;
+            else
+            {
+
+                livro.DataAlteracao = DateTime.Now;
+            }
+
+            contextDB.SaveChanges();
+
+            return true;
+        }
+
+        public bool InserirLivro(Livro item)
+        {
+            if (string.IsNullOrWhiteSpace(item.Nome))
+                return false;
+
+            contextDB.Livros.Add(item);
+            contextDB.SaveChanges();
+
+            return true;
+        }
+        
+        public bool RemoverLivro(int id)
+        {
+            var livro = contextDB.Livros.FirstOrDefault(i => i.Id == id);
+
+            if (livro == null)
+                return false;
+
+            livro.Ativo = false;
+
+            contextDB.SaveChanges();
+
+            return true;
         }
     }
 }
+
+
+
 

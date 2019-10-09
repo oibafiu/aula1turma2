@@ -92,17 +92,18 @@ namespace InterfaceBiblioteca
             Console.WriteLine("Cadastrar usuário dentro do sistema:");
             Console.WriteLine("Informe um login");
             var loginUsuario = Console.ReadLine();
-
-
             Console.WriteLine("Informe uma senha");
             var senhaUsuario = Console.ReadLine();
-            usuarioController.AdicionarUsuario(new Usuario()
+
+            var resultado = usuarios.InserirUsuarios(new Usuario()
             {
                 Login = loginUsuario,
                 Senha = senhaUsuario
             });
-            Console.WriteLine("Usuario cadastrado com sucesso!");
-            Console.ReadKey();
+            if (resultado)
+                Console.WriteLine("Usuario cadastrado com sucesso!");
+            else
+                Console.WriteLine("Erro ao cadastrar");
         }
         private static void RemoverUsuario()
         {
