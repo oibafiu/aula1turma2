@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstTeste", "CodeFirstTeste\CodeFirstTeste.csproj", "{A8C15B3C-A3C6-4865-B6B5-435A0EBFF3F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GambCodeFirst", "GambCodeFirst\GambCodeFirst.csproj", "{61E594CF-3290-4A27-9FFF-B4EAAAF92FD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8C15B3C-A3C6-4865-B6B5-435A0EBFF3F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C15B3C-A3C6-4865-B6B5-435A0EBFF3F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C15B3C-A3C6-4865-B6B5-435A0EBFF3F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C15B3C-A3C6-4865-B6B5-435A0EBFF3F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61E594CF-3290-4A27-9FFF-B4EAAAF92FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E594CF-3290-4A27-9FFF-B4EAAAF92FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E594CF-3290-4A27-9FFF-B4EAAAF92FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E594CF-3290-4A27-9FFF-B4EAAAF92FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16F0EBB2-8A3B-451C-9232-5B7E644AF8A4}
+	EndGlobalSection
+EndGlobal
