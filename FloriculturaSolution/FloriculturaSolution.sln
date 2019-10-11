@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flores", "Flores\Flores.csproj", "{08847E4A-653C-4BF0-ABEB-645C350D160C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListagemDeFlores", "ListagemDeFlores\ListagemDeFlores.csproj", "{BEFB4244-9F88-4C49-A986-1E12A30861A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloriculturaInterface", "FloriculturaInterface\FloriculturaInterface.csproj", "{C85C76E1-CBE3-4291-9E7C-08E131918CE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{08847E4A-653C-4BF0-ABEB-645C350D160C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08847E4A-653C-4BF0-ABEB-645C350D160C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08847E4A-653C-4BF0-ABEB-645C350D160C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08847E4A-653C-4BF0-ABEB-645C350D160C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEFB4244-9F88-4C49-A986-1E12A30861A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEFB4244-9F88-4C49-A986-1E12A30861A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEFB4244-9F88-4C49-A986-1E12A30861A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEFB4244-9F88-4C49-A986-1E12A30861A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C85C76E1-CBE3-4291-9E7C-08E131918CE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C85C76E1-CBE3-4291-9E7C-08E131918CE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C85C76E1-CBE3-4291-9E7C-08E131918CE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C85C76E1-CBE3-4291-9E7C-08E131918CE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

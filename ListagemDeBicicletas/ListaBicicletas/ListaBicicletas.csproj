@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{08847E4A-653C-4BF0-ABEB-645C350D160C}</ProjectGuid>
+    <ProjectGuid>{645E1A66-2A98-4B7D-8254-BA2F60706D77}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Flores</RootNamespace>
-    <AssemblyName>Flores</AssemblyName>
+    <RootNamespace>ListaBicicletas</RootNamespace>
+    <AssemblyName>ListaBicicletas</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -51,9 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\FloresController.cs" />
-    <Compile Include="Model\Flores.cs" />
-    <Compile Include="Model\FloresContextDB.cs" />
+    <Compile Include="Controller\BicicletasController.cs" />
+    <Compile Include="Model\Bicicleta.cs" />
+    <Compile Include="Model\BicicletaContextDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

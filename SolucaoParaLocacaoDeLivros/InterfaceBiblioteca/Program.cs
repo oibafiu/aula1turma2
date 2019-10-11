@@ -141,6 +141,8 @@ namespace InterfaceBiblioteca
 
             Console.WriteLine("Informe o ID para desativar no sistema");
 
+            var teste = Console.ReadKey(true).Key.ToString();
+
             var livroId = int.Parse(Console.ReadLine());
 
 

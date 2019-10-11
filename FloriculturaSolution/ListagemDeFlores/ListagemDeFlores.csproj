@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{08847E4A-653C-4BF0-ABEB-645C350D160C}</ProjectGuid>
+    <ProjectGuid>{BEFB4244-9F88-4C49-A986-1E12A30861A0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Flores</RootNamespace>
-    <AssemblyName>Flores</AssemblyName>
+    <RootNamespace>ListagemDeFlores</RootNamespace>
+    <AssemblyName>ListagemDeFlores</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
