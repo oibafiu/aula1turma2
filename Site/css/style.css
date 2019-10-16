@@ -1,0 +1,13 @@
+body {
+    background-image: url('https://www.spiceuptheroad.com/site/wp-content/uploads/2019/06/ishan-seefromthesky-1113275-unsplash.jpg');
+    background-size: cover;
+}
+
+
+.card-body {
+    align-content: center;
+    background-color: #001dff96;
+    margin-bottom: 50vh;
+    text-align: center;
+}
+
