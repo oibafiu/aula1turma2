@@ -8,25 +8,28 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body style="height:100vh;">
 
-   
-    <div class="card-body">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Clique aqui!
-        </button>
+    <div class="row d-flex align-content-center justify-content-center h-100">
+        <div class="container-fluid h-100">
+            <div class="card-body">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Clique aqui!
+                </button>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
 
-                    <div class="modal-body">
-                        <input type="text" name="nome" placeholder="Digite seu nome" />
-                    </div>
-                    <div class="modal-footer">
+                            <div class="modal-body">
+                                <input type="text" name="nome" placeholder="Digite seu nome" />
+                            </div>
+                            <div class="modal-footer">
 
-                        <button type="button" onclick="funcao()" class="btn btn-primary">Ganhar premio</button>
+                                <button type="button" onclick="funcao()" class="btn btn-primary">Ganhar premio</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
