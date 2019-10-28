@@ -14,7 +14,7 @@ namespace CalculandoIdade.Controllers
         public string Post(Pessoa pessoa)
         {
             var imc = pessoa.Peso/ (pessoa.Altura * pessoa.Altura);
-            return $"Olá {pessoa.Nome} , seu IMC é {imc.ToString("N2")}...";
+            return $"Olá {pessoa.Nome} , seu IMC é {imc.ToString("N2")}";
         }
     }
 }
