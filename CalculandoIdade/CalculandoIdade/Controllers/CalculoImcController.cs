@@ -4,16 +4,17 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace CalculandoIdade.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class CalculoImcController : ApiController
     {
-        public string Get(int peso, string nomeUsuario = "", int altura)
+        public string Post(Pessoa pessoa)
         {
-
-            var imc = peso / (altura * altura);
-            return $"Olá {nomeUsuario} , seu IMC é {imc}...";
+            var imc = pessoa.Peso/ (pessoa.Altura * pessoa.Altura);
+            return $"Olá {pessoa.Nome} , seu IMC é {imc.ToString("N2")}...";
         }
     }
 }

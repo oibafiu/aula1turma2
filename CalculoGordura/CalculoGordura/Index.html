@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Calculo de IMC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="text-center">
+    <form class="form-signin" id="FormularioLegal">
+        <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Calculadora de IMC</h1>
+        <label class="sr-only">Nome</label>
+        <input type="text" name="Nome" class="form-control" placeholder="Digite seu nome">
+        <label class="sr-only">Peso</label>
+        <input type="text" name="peso" class="form-control" placeholder="Digite seu peso" required>
+        <label class="sr-only">Altura</label>
+        <input type="text" name="altura" class="form-control" placeholder="Digite sua altura" required>
+
+        <button name="calcular" class="btn btn-lg btn-primary btn-block">Calcular</button>
+
+    </form>
+
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/Util/script.js"></script>
+</body>
+</html>

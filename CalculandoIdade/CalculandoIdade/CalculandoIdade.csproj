@@ -164,6 +164,7 @@
     <Compile Include="Controllers\CalculoIdadeController.cs" />
     <Compile Include="Controllers\CalculoImcController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Pessoa.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
