@@ -12,8 +12,8 @@ namespace CalculandoIdade.Controllers
         public string Get(int peso, string nomeUsuario = "", int altura)
         {
 
-            return 
-         
+            var imc = peso / (altura * altura);
+            return $"Olá {nomeUsuario} , seu IMC é {imc}...";
         }
     }
 }
