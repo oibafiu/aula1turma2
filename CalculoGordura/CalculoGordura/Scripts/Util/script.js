@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     //PEGAR A INFORMAÇÃO DO BOTÃO E ENVIAR OS DADOS PARA A URL
-    $('button[name="calcular"]').click(function () {
+    $('button[id="calcular"]').click(function () {
         //VARIAVEIS QUE VAMOS PEGAR DO INDEX
 
        
