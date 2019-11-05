@@ -8,13 +8,14 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using WebApiBancoExistente.Models;
+using WebApiExercicio.Models;
 
-namespace WebApiBancoExistente.Controllers
+namespace WebApiExercicio.Controllers
 {
-    public partial class CarroesController : ApiController
+    public class CarroesController : ApiController
     {
-     
+        private Context db = new Context();
+
         // GET: api/Carroes
         public IQueryable<Carro> GetCarros()
         {

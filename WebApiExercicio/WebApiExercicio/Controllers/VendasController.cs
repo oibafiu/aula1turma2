@@ -8,47 +8,48 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using WebApiBancoExistente.Models;
+using WebApiExercicio.Models;
 
-namespace WebApiBancoExistente.Controllers
+namespace WebApiExercicio.Controllers
 {
-    public partial class CarroesController : ApiController
+    public partial class VendasController : ApiController
     {
-     
-        // GET: api/Carroes
-        public IQueryable<Carro> GetCarros()
+        public Context db = new Context();
+
+        // GET: api/Vendas
+        public IQueryable<Venda> GetVendas()
         {
-            return db.Carros;
+            return db.Vendas;
         }
 
-        // GET: api/Carroes/5
-        [ResponseType(typeof(Carro))]
-        public IHttpActionResult GetCarro(int id)
+        // GET: api/Vendas/5
+        [ResponseType(typeof(Venda))]
+        public IHttpActionResult GetVenda(int id)
         {
-            Carro carro = db.Carros.Find(id);
-            if (carro == null)
+            Venda venda = db.Vendas.Find(id);
+            if (venda == null)
             {
                 return NotFound();
             }
 
-            return Ok(carro);
+            return Ok(venda);
         }
 
-        // PUT: api/Carroes/5
+        // PUT: api/Vendas/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutCarro(int id, Carro carro)
+        public IHttpActionResult PutVenda(int id, Venda venda)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != carro.Id)
+            if (id != venda.Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(carro).State = EntityState.Modified;
+            db.Entry(venda).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +57,7 @@ namespace WebApiBancoExistente.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CarroExists(id))
+                if (!VendaExists(id))
                 {
                     return NotFound();
                 }
@@ -69,35 +70,35 @@ namespace WebApiBancoExistente.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Carroes
-        [ResponseType(typeof(Carro))]
-        public IHttpActionResult PostCarro(Carro carro)
+        // POST: api/Vendas
+        [ResponseType(typeof(Venda))]
+        public IHttpActionResult PostVenda(Venda venda)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Carros.Add(carro);
+            db.Vendas.Add(venda);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = carro.Id }, carro);
+            return CreatedAtRoute("DefaultApi", new { id = venda.Id }, venda);
         }
 
-        // DELETE: api/Carroes/5
-        [ResponseType(typeof(Carro))]
-        public IHttpActionResult DeleteCarro(int id)
+        // DELETE: api/Vendas/5
+        [ResponseType(typeof(Venda))]
+        public IHttpActionResult DeleteVenda(int id)
         {
-            Carro carro = db.Carros.Find(id);
-            if (carro == null)
+            Venda venda = db.Vendas.Find(id);
+            if (venda == null)
             {
                 return NotFound();
             }
 
-            db.Carros.Remove(carro);
+            db.Vendas.Remove(venda);
             db.SaveChanges();
 
-            return Ok(carro);
+            return Ok(venda);
         }
 
         protected override void Dispose(bool disposing)
@@ -109,9 +110,9 @@ namespace WebApiBancoExistente.Controllers
             base.Dispose(disposing);
         }
 
-        private bool CarroExists(int id)
+        private bool VendaExists(int id)
         {
-            return db.Carros.Count(e => e.Id == id) > 0;
+            return db.Vendas.Count(e => e.Id == id) > 0;
         }
     }
 }
